@@ -1,0 +1,38 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url(metaData/BebasNeue-Regular.otf);
+}
+
+body{
+    margin: 0;
+}
+
+.navGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-bottom: 4cqw;
+}
+
+.navGrid a{
+    text-decoration: none;
+    font-size: 200%;
+    color: white;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul>li>a{
+    text-decoration: none;
+}
+
+#logo{
+    min-width: 100px;
+    min-height: 100px;
+    border: solid black 1px;
+}
