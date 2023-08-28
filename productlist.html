@@ -16,8 +16,22 @@
     </header>
     <main>
         <section id="cards">
-            <!-- normalt produkt -->
-            <div class="product">
+            <template id="productTemplate">
+                <div class="product">
+                    <a href="product.html">
+                        <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="">
+                    </a>
+                    <p class="soldP">UDSOLGT</p>
+                    <p class="saleP">Tilbud</p>
+                    <div class="prodInfo">
+                        <h3 class="prodName"></h3>
+                        <p><span class="prodBrand"></span></p>
+                        <p><span class="prodPrice"></span> DKK</p>
+                        <p id="priceBef" class="hiddenBef">Før: <span class="prodPriceBefore"></span> DKK</p>
+                    </div>
+                </div>
+            </template>
+            <!-- <div class="product soldProd">
                 <a href="product.html">
                     <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="">
                 </a>
@@ -28,19 +42,6 @@
                     <p>(pris)</p>
                 </div>
             </div>
-            <!-- udsolgt produkt -->
-            <div class="product soldProd">
-                <a href="product.html">
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="">
-                </a>
-                <p class="soldP">UDSOLGT</p>
-                <p class="saleP">Tilbud</p>
-                <div class="prodInfo">
-                    <p>(navn)</p>
-                    <p>(pris)</p>
-                </div>
-            </div>
-            <!-- tilbuds produkt -->
             <div class="product saleProd">
                 <a href="product.html"> 
                      <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="">
@@ -52,6 +53,17 @@
                     <p>(pris)</p>
                 </div>
             </div>
+            <div class="product saleProd soldProd">
+                <a href="product.html"> 
+                     <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="">
+                 </a>
+                <p class="soldP">UDSOLGT</p>
+                <p class="saleP">Tilbud</p>
+                <div class="prodInfo">
+                    <p>(navn)</p>
+                    <p>(pris)</p>
+                </div>
+            </div> -->
         </section>
     </main>
 
