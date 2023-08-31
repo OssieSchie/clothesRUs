@@ -14,31 +14,84 @@ h3{
 }
 
 #prodView{
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 2fr;
     text-align: left;
     margin-top: 3cqw;
     margin-bottom: 2cqw;
     margin-left: 5cqw;
+    gap: 3cqw;
     margin-right: 5cqw;
 }
 
 #prodView img{
     /* display: flex; */
     max-height: 90cqh;
+    border-radius: 1.5cqw;
 }
 
 .prodInfo{
-    display: grid;
-    grid-template-rows: repeat(6,1fr);
-    gap: 2cqw;
-    justify-content: left;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3cqw;
 }
 
-.grid1-1{
+h2{
+    font-family: BebasNeue;
+}
+
+/* .grid1-1{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1cqw;
-}
+} */
 
 /* body{background-color: blue;} */
+
+.soldP{
+    font-family: BebasNeue;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    rotate: 30deg;
+    font-size:777%;
+    filter: drop-shadow(0px 0px 3px white);
+}
+
+.saleP{
+    font-family: BebasNeue;
+    position: absolute;
+    top: -5%;
+    left: -2%;
+    font-size: 300%;
+    background-color: orangered;
+    padding: 10px;
+    margin: 0;
+}
+
+#prodView .soldP,.saleP{
+    visibility: hidden;
+}
+
+
+.soldProd img{
+    filter: grayscale(1);
+    filter: brightness(0.5);
+}
+
+.soldProd .soldP{
+    visibility: visible;
+}
+.saleProd .saleP{
+    visibility: visible;
+}
+
+.prodPriceBefore, #priceBef{
+    color: grey;
+}
+
+.hiddenBef{
+    display: none;
+}

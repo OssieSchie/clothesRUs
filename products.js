@@ -1,6 +1,10 @@
-fetch("https://kea-alt-del.dk/t7/api/products?limit=30")
-    .then(res=>res.json())
-    .then(showProducts)
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
+
+fetch("https://kea-alt-del.dk/t7/api/products?limit=30&category=" + category)
+.then(res=>res.json())
+.then(showProducts)
 
 function showProducts(products){
     products.forEach(showProduct)
@@ -9,28 +13,30 @@ function showProducts(products){
 function showProduct(product){
     // console.log(product);
     const template = document.querySelector("#productTemplate").content;
-
+    
     const copy = template.cloneNode(true);
-
+    
     copy.querySelector("h3").textContent=product.productdisplayname;
     
     copy.querySelector(".prodPrice").textContent=product.price;
-
+    
     copy.querySelector(".prodBrand").textContent=product.brandname;
-
+    
     copy.querySelector("a img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
+    copy.querySelector("a").href = `product.html?id=` + product.id;
+    
     if(product.discount){
         let discount = product.price/100*product.discount;
         let newPrice = Math.round(product.price-discount);
         console.log(newPrice)
-
+        
         copy.querySelector("div").classList.add("saleProd")
         copy.querySelector(".prodPrice").textContent=newPrice;
         copy.querySelector(".prodPriceBefore").textContent=product.price;
         copy.querySelector("#priceBef").classList.remove("hiddenBef");
     }
-
+    
     if(product.soldout){
         copy.querySelector("div").classList.add("soldProd")
     }
@@ -38,17 +44,18 @@ function showProduct(product){
     document.querySelector("main #cards").appendChild(copy);
 }
 
+document.querySelector("h1").textContent = category;
 
 
 /* <div class="product">
-                    <a href="product.html">
+<a href="product.html">
                         <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="">
                     </a>
                     <p class="soldP">UDSOLGT</p>
                     <p class="saleP">Tilbud</p>
                     <div class="prodInfo">
-                        <p>(navn)</p>
-                        <p>(pris)</p>
+                    <p>(navn)</p>
+                    <p>(pris)</p>
                     </div>
                 </div>
                 

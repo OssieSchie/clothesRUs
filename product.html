@@ -9,22 +9,33 @@
 </head>
 <body>
     <header class="navGrid">
-        <img src="" alt="" id="logo">
+        <a href="category.html">
+            <img src="SVG/Artboard 1.svg" alt="logo" id="logo">
+        </a>  
+        <br>
         <a href="index.html">Forside</a>
         <a href="category.html">Kategorier</a>
-        <a href="productlist.html">Produktliste</a>
+        <!-- <a href="productlist.html">Produktliste</a> -->
     </header>
-    <section id="prodView">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="">
-        <div class="prodInfo">
-            <div class="grid1-1">
+
+        <section id="prodView">
+                <img id="prodImg" src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="">
+
+                <p class="soldP">UDSOLGT</p>
+                <p class="saleP">Tilbud</p>
+
+            <div class="prodInfo">
                 <h2>(Produkt)</h2>
-                <h3>(Subcategory)</h3>
+                <h3 class="prodSubCat">(Subcategory)</h3>
+                <h3 class="prodBrand">(Brand)</h3>
+                <div>
+                    <h3 class="prodPrice">(Pris)</h3>
+                    <p id="priceBef" class="hiddenBef">Før: <span class="prodPriceBefore"></span> DKK</p>
+                </div>
+
+
             </div>
-            <h3>(Pris)</h3>
-            <h3>(Brand)</h3>
-            <h3>(BrandBio)</h3>
-        </div>
-    </section>
+        </section>
+    <script src="product.js"></script>
 </body>
 </html>

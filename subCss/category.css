@@ -9,6 +9,8 @@
 }
 
 .grid6-2 a{
+    font-family: BebasNeue;
+    color: black;
     border: solid grey 2px;
     border-top: solid lightgrey 2px;
     border-bottom: solid black 6px;
